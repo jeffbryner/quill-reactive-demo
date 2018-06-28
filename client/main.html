@@ -1,21 +1,13 @@
 <head>
-  <title>Minimal Meteor app</title>
+  <title>quill-reactive DEMO</title>
 </head>
 
 <body>
-  <h1>Minimal Meteor app</h1>
-  <p>
-    This Meteor app uses as few Meteor packages as possible, to keep the
-    client JavaScript bundle as small as possible.
-  </p>
+  <h1>A Meteor demo of realtime quill-reactive editing</h1>
+  <p> This editor is shared between everyone currently on this web page</p>
+  <p> You should be able to see edits in realtime.</p>
+  <p> The contents will be reset every x seconds</p>
+  <br>
 
-  <em id="server-render-target"></em>
-
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+  {{> quillReactive collection="notes" docId="1234" field="note"}}
 </body>
