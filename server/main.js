@@ -1,15 +1,26 @@
-import { Meteor } from "meteor/meteor";
-import { onPageLoad } from "meteor/server-render";
+import { Meteor } from 'meteor/meteor';
+import { Mongo } from 'meteor/mongo';
+import { Session } from 'meteor/session';
 
 Meteor.startup(() => {
-  // Code to run on server startup.
-  console.log(`Greetings from ${module.id}!`);
-});
+    // code to run on server at startup
+    notes = new Mongo.Collection('notes');
+    notes.remove({});
+    notes.insert({
+        _id: '1234',
+        note: 'starter text'
+    });
 
-onPageLoad(sink => {
-  // Code to run on every request.
-  sink.renderIntoElementById(
-    "server-render-target",
-    `Server time: ${new Date}`
-  );
+    notes.allow({
+        insert: function (userId, doc) {
+            return (true);
+        },
+        update: function (userId, doc, fields, modifier) {
+            return (true);
+        },
+        remove: function (userId, doc) {
+            return (true);
+        },
+        fetch: ['creator']
+    });
 });
