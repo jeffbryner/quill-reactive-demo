@@ -5,5 +5,5 @@ ARG PORT=3000
 FROM jshimko/meteor-launchpad:latest
 EXPOSE 3000
 
-#build with docker build -t jeffbryner/quill-reactive-demo .
-#run with docker docker run -p3000:3000 jeffbryner/quill-reactive-demo
+#build with docker build -t 0x7eff/quill-reactive-demo .
+#run with docker docker run -p3000:3000 0x7eff/quill-reactive-demo
