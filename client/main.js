@@ -13,5 +13,4 @@ import './main.html';
 
 if (Meteor.isClient) {
     notes = new Mongo.Collection('notes');
-    Session.set("liveEditing",true);
 }
