@@ -12,7 +12,6 @@ ecmascript@0.12.0              # Enable ECMAScript2015+ syntax in app code
 shell-server@0.4.0            # Server-side component of the `meteor shell` command
 webapp@1.7.0                  # Serves a Meteor app over HTTP
 server-render@0.3.1           # Support for server-side rendering
-jeffbryner:quill-reactive
 session@1.1.8
 spacebars
 blaze
@@ -23,3 +22,4 @@ tracker@1.2.0
 autopublish@1.0.7
 meteor-base@1.4.0
 reactive-var@1.0.11
+jeffbryner:quill-reactive
